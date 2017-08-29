@@ -1,0 +1,15 @@
+<?xml version='2.0' encoding='utf-8'?>
+<widget id="com.valencia.EMT" version="2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>TarjetasEMT</name>
+    <description>
+ Control de saldo de tarjetas de transporte </description>
+    <author email="juannuffin@hotmail.com" href="#">
+        Juan Valencia  </author>
+    <content src="index.html" />
+    <access origin="*" />
+<icon src="logo-36x36.png" platform="android" qualifier="ldpi" />
+<icon src="logo-48x48.png" platform="android" qualifier="mdpi" />
+<icon src="logo-72x72.png" platform="android" qualifier="hdpi" />
+<icon src="logo-96x96.png" platform="android" qualifier="xhdpi" />
+
+</widget>

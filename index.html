@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial.scale=1">
+<link href="css/bootstrap.css" rel="stylesheet">
+<script src="js/jquery-1.11.2.min.js" class="__web-inspector-hide-shortcut__"></script>
+<script src="js/bootstrap.js"></script>
+<title>Documento sin título</title>
+<link rel="stylesheet" href="almacenamiento.css">
+<script src="js/emt.js"></script>
+<script src="js/moment.js"></script>
+<script src="jquery-2.1.4.js" ></script>
+<script type="text/javascript">
+<!--
+
+var timer = null;
+var floatHeight  = 80 + 3; //added margin
+var floatWidth   = 50 + 3; //added margin
+
+var obj = null;
+var IE=0, NS=0;
+
+	// Initializing function, must be called on onLoad event in BODY tag
+
+function init()
+{
+    	 // get the object as per the browser
+    obj = document.layers ? document.layers["float"] :		 
+    document.getElementById ?  document.getElementById("float").style :
+    document.all["float"].style;
+								
+         // Detect the browser
+    IE  = (-1 != navigator.appVersion.indexOf("MSIE")) ? 1 : 0;
+    NS  = ("Netscape" == navigator.appName) ? 1 : 0;
+
+    positionFloat(1); 	 // position initially
+    
+         // repositioning the layer	
+    if(IE)
+    { 
+         self.onscroll = function(){ positionFloat(1); }
+         self.onresize = function(){ positionFloat(1); }   //when window is resized
+    }
+    else if(NS)
+    { timer = setInterval("positionFloat(4)",10);}
+}
+ 
+	// Function which actually positions the layer 	
+
+function positionFloat(iPos)
+{
+   if(IE)          // IE specific code
+   {
+		obj.left = document.body.scrollLeft;
+		obj.top =  document.body.scrollTop+200;
+
+   }
+   else if(NS)     // Netscape specific code
+   {
+		obj.left = self.pageXOffset;
+		obj.top =  self.pageYOffset+200;
+   }
+}
+// -->
+</script>
+<script type="text/javascript">
+init();
+</script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">        
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                	<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Tarjeta EMT</a>
+			</div>
+            <div class="collapse navbar-collapse" id="menu">
+            	<ul class="nav navbar-nav" id="menuPrincipal" data-toggle="collapse">
+                	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones<span class="caret"> </span></a>
+                    	<ul class="dropdown-menu">
+      						<li id="inicializar"><a href="#" data-toggle="collapse" data-target="#menu">Inicializar valores</a></li>
+      						<li id="resetear"><a href="#" data-toggle="collapse" data-target="#menu">Resetear valores</a></li>
+                            
+    					</ul>
+                    
+                    </li>
+                    <li id="recargar"><a href="#" data-toggle="collapse" data-target="#menu">Recarga</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Historial<span class="caret"> </span></a>                                       
+                    	<ul class="dropdown-menu">
+      						<li id="historial"><a href="#" data-toggle="collapse" data-target="#menu">Historial de movimientos</a></li>
+      						<li id="historialRecargas"><a href="#" data-toggle="collapse" data-target="#menu">Historial de recargas</a></li>
+                            <li><a href="borrar_historial.html" data-toggle="collapse" data-target="#menu">Borrar historial de movimientos</a></li>
+                            <li><a href="borrar_recargas.html" data-toggle="collapse" data-target="#menu">Borrar historial de recargas</a></li>
+                            
+    					</ul>
+                     </li>
+                    
+                    <li><a href="#" data-toggle="collapse" data-target="#menu">Acerca de</a></li>
+                    <li><a href="#" data-toggle="collapse" data-target="#menu">Salir</a></li>
+                    
+                </ul>
+            </div>
+		</div>
+	</nav>
+<div id="contenedor">
+	<!--<div id="zonaEmt">EMT-->
+    
+    	<!--<input type="button" id="emt" value="EMT"> -->
+    
+    <!--</div>-->
+    <div id="ventanaEmergente">
+    
+    
+    
+    </div>
+    <figure id="zonaEmt">
+    	<img src="logo-emt.png" alt="EMT" id="emt">
+    </figure>
+    <!--<div id="zonaMetro">METRO
+    
+    	 <input type="button" id="metro" value="METRO"> 
+    
+    </div>-->
+    <figure id="zonaMetro">
+    	<img src="logo-metro.png" alt="METRO" id="metro">
+    </figure>
+    <!--<div id="zonaConsorcio">CONSORCIO
+    
+    	 <input type="button" id="metro" value="METRO"> 
+    
+    </div>-->
+    <figure id="zonaConsorcio">
+    	<img src="logo-ctm.png" alt="CONSORCIO" id="cons">
+    </figure>
+    
+    <figure id="zonaTransbordo">
+    	<img src="logo-transbordo.png" alt="TRANSBORDO" id="trans">
+    </figure>
+    
+    <div id="zonaSaldo">
+    
+    
+    </div>
+    
+    
+    <footer>
+    	(c) Valencia 2017
+    </footer>
+    
+    </div>
+
+</body>
+</html>
