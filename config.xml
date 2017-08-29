@@ -1,8 +1,8 @@
-<?xml version='2.0' encoding='utf-8'?>
-<widget id="com.valencia.EMT" version="2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>TarjetasEMT</name>
+<?xml version='1.2' encoding='utf-8'?>
+<widget id="com.valencia.dardos" version="1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="">
+    <name>Dardos</name>
     <description>
- Control de saldo de tarjetas de transporte </description>
+ Puntuación de juegos de dardos </description>
     <author email="juannuffin@hotmail.com" href="#">
         Juan Valencia  </author>
     <content src="index.html" />
